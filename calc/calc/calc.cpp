@@ -59,7 +59,7 @@ void THREAD_ONE() {
 	{
 
 		object_one.position = SUM_VECTOR3(object_one.position, direction);
-		std::cout << i << "::repid - x: " << object_one.position.x << ", y: " << object_one.position.y << ", z: " << object_one.position.z << std::endl;
+		std::cout << i; SAY_POSITION(object_one.position);
 	}
 }
 
@@ -67,12 +67,15 @@ void THREAD_TWO() {
 
 	std::cout << "ptv3d::repid - physic_transform_v3_demo" << std::endl;
 
-	std::cout << "obj1 - x: " << object_one.position.x << ", y: " << object_one.position.y << ", z: " << object_one.position.z << ", mass: " << object_one.physicbody.mass << std::endl;
-	std::cout << "obj2 - x: " << object_two.position.x << ", y: " << object_two.position.y << ", z: " << object_two.position.z << ", mass: " << object_two.physicbody.mass << std::endl;
+	SAY_POSITION(object_one.position);
+	std::cout << "mass: " << object_one.physicbody.mass << std::endl;
+
+	SAY_POSITION(object_two.position);
+	std::cout << "mass: " << object_two.physicbody.mass << std::endl;
 
 	std::cout << "sum vectors3: ";
 	VECTOR3 temp = SUM_VECTOR3(object_one.position, object_two.position);
-	std::cout << "pt3::repid - x: " << temp.x << ", y: " << temp.y << ", z: " << temp.z << std::endl;
+	SAY_POSITION(temp);
 
 	double r = GET_r(object_one.position, object_two.position);
 	double F = GET_F(GET_SIMPLE_G(), object_one.physicbody.mass, object_two.physicbody.mass, r);

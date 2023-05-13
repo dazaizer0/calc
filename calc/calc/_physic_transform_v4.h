@@ -26,6 +26,11 @@ static VECTOR3 SUM_VECTOR3(VECTOR3 v3_1, VECTOR3 v3_2) {
 	return temp;
 }
 
+void SAY_POSITION(VECTOR3 temp) {
+
+	std::cout << "::repid - x: " << temp.x << ", y: " << temp.y << ", z: " << temp.z << std::endl;
+}
+
 static double GET_G(double m, double kg, double s) {
 
 	double G = 6.67430 * pow(10, -11) * ((pow(m, 3)) / (kg * pow(s, 2)));
