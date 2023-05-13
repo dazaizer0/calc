@@ -1,7 +1,6 @@
 ﻿#include "_calc_assemblage.h"
 
 
-
 void THREAD_ONE();
 
 // CALC
