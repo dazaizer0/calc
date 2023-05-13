@@ -6,3 +6,5 @@
 
 #include "_physic_transform_v4.h"
 #include "_object_base.h"
+#include "_comreader.h"
+#include "_calcconst.h"

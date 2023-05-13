@@ -29,16 +29,19 @@ static VECTOR3 SUM_VECTOR3(VECTOR3 v3_1, VECTOR3 v3_2) {
 static double GET_G(double m, double kg, double s) {
 
 	double G = 6.67430 * pow(10, -11) * ((pow(m, 3)) / (kg * pow(s, 2)));
+	return G;
 }
 
 static double GET_SIMPLE_G() {
 
 	double G = 6.67430;
+	return G;
 }
 
 static double GET_F(double G, double mass1, double mass2, double r) {
 
 	double F = G * ((mass1 * mass2) / (pow(r, 2)));
+	return F;
 }
 
 static double GET_r(VECTOR3 position1, VECTOR3 position2) {

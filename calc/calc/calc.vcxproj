@@ -130,6 +130,7 @@
     <ClCompile Include="calc.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_calcconst.h" />
     <ClInclude Include="_calc_assemblage.h" />
     <ClInclude Include="_object_base.h" />
     <ClInclude Include="_physic_transform_v4.h" />
